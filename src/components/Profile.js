@@ -1,33 +1,28 @@
-import user from ''
-// import PropTypes from 'prop-types';
-import css from "./Profile.module.css";
+import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 import styled from '@emotion/styled';
-export const Profile = ({
-                username,
-                tag,
-                location,
-                avatar,
-                stats,
-                followers,
-                views,
-                likes
+const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats,
+  followers,
+  views,
+  likes,
 }) => {
-return (
+  return (
     <div className={css.profile}>
       <div className={css.description}>
-        <img
-          src={avatar}
-        alt={username}
-        className={css.avatar}
-    />
+        <img src={avatar} alt={username} className={css.avatar} />
         <p className={css.name}> {username}</p>
         <p className={css.tag}>{tag} </p>
         <p className={css.plocation}>{location}</p>
       </div>
 
-      <ul className={css.stats} >
+      <ul className={css.stats}>
         <li>
-          <span className={css.label}>Followers </span>
+          <span className={css.label}>Followers</span>
           <span className={css.quantity}>{stats.followers}</span>
         </li>
         <li>
@@ -38,7 +33,18 @@ return (
           <span className={css.label}>Likes</span>
           <span className={css.quantity}>{stats.likes}</span>
         </li>
-        </ul>
+      </ul>
     </div>
-)
-}
+  );
+};
+export default Profile;
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
+};

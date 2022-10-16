@@ -1,19 +1,9 @@
-import UserProfile from "./UserProfile";
-import user from '../user.json';
+import Profile from "./Profile";
+import user from "./user.json";
 
 const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      < UserProfile
+     <Profile
       username={user.username}
       tag={user.tag}
       location={user.location}
@@ -22,9 +12,8 @@ const App = () => {
       followers={user.stats.followers}
       views={user.stats.views}
       likes={user.stats.likes}
-      quantity={user.stats.quantity} />
-    </div>
-  );
+      quantity={user.stats.quantity}/>
+    )
 };
+export default App
 
-export default App;
