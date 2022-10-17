@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
-import styled from '@emotion/styled';
 const Profile = ({
   username,
   tag,
