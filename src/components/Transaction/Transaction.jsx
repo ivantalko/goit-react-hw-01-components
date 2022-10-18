@@ -1,24 +1,31 @@
-const TransactionList = ({ transactions }) => {
+import PropTypes from 'prop-types';
+import css from './Tran.module.css';
+const TransactionList = ({ items }) => {
   return (
-    <>
-      <table class="transaction-history">
-        <thead>
-          <tr>
-            <th>Type</th>
-            <th>Amount</th>
-            <th>Currency</th>
-          </tr>
-        </thead>
+    <table className={css.transaction_history}>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>Invoice</td>
-            <td>125</td>
-            <td>USD</td>
+      <tbody>
+        {items.map(({ id, type, amount, currency }) => (
+          <tr key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
           </tr>
-        </tbody>
-      </table>
-    </>
+        ))}
+      </tbody>
+    </table>
   );
 };
 export default TransactionList;
+TransactionList.propTypes = {
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string,
+};

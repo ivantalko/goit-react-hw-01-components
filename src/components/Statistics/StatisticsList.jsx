@@ -7,7 +7,11 @@ const StatsList = ({ title, stats }) => {
         {title && <h2 className={css.title}>{title}</h2>}
         <ul className={css.stat_list}>
           {stats.map(({ id, label, percentage }) => (
-            <li className={css.item} key={id}>
+            <li
+              className={css.item}
+              style={{ backgroundColor: getRandomHexColor() }}
+              key={id}
+            >
               <span className={css.label}>{label}</span>
               <span className={css.percentage}>{percentage}%</span>
             </li>
@@ -19,7 +23,10 @@ const StatsList = ({ title, stats }) => {
 };
 export default StatsList;
 StatsList.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   label: PropTypes.string,
   percentage: PropTypes.number,
 };
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

@@ -1,9 +1,13 @@
-import css from '../Friendsitem/';
+import css from '../Friendsitem/friend.module.css';
 import PropTypes from 'prop-types';
 const Frienditem = ({ id, isOnline, avatar, name }) => {
   return (
     <li className={css.item}>
-      <span className={css.status}>{isOnline}</span>
+      {isOnline ? (
+        <span className={css.status_online}>{isOnline}</span>
+      ) : (
+        <span className={css.status_offline}>{isOnline}</span>
+      )}
       <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
       <p className={css.name}>{name}</p>
     </li>
