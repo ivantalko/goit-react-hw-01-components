@@ -18,7 +18,6 @@ const App = () => {
         followers={user.stats.followers}
         views={user.stats.views}
         likes={user.stats.likes}
-        quantity={user.stats.quantity}
       />
       <StatsList title={'Upload stats'} stats={stats} />
       <FriendtList friends={friends} />
