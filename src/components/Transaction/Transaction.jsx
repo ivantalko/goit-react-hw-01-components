@@ -25,7 +25,7 @@ const TransactionList = ({ items }) => {
 };
 export default TransactionList;
 TransactionList.propTypes = {
-  type: PropTypes.string,
-  amount: PropTypes.number,
-  currency: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
 };

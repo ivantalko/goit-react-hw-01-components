@@ -1,6 +1,3 @@
-body {
-  background-color: rgba(128, 128, 128, 0.352);
-}
 .profile {
   width: 220px;
   margin-left: auto;
@@ -25,12 +22,6 @@ body {
   width: 96px;
   height: 96px;
 }
-/* .name {
-}
-.tag {
-} */
-/* .location {
-} */
 .stats {
   font-size: 10px;
   padding: 0px;
@@ -43,26 +34,8 @@ body {
 
   background-color: white;
 }
-/* .stats {
-    display: flex;
-    justify-content: space-around;
-    font-size: 10px;
-    padding: 20px;
-    margin: 0;
-    flex-wrap: wrap;
-    list-style: none;
-    border: 1px solid rgba(0, 0, 0, 0.168);
-    background-color: white;
-} */
-
 .label {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-li {
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.176);
-}
-/* .quantity {
-} */
