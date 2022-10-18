@@ -1,8 +1,7 @@
 .transaction_history {
   margin: auto;
 }
-td,
-th {
+td {
   background-color: white;
   border: 5px solid rgb(156, 106, 106);
   border-radius: 3px;
@@ -10,4 +9,10 @@ th {
 td {
   text-align: center;
   padding: 0px 10px;
+}
+th {
+  color: rgb(255, 255, 255);
+  background-color: rgb(136, 64, 64);
+  border: 5px solid transparent;
+  border-radius: 1px;
 }
