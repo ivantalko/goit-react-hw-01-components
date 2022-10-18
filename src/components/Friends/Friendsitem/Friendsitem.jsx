@@ -1,6 +1,6 @@
 import css from '../Friendsitem/friend.module.css';
 import PropTypes from 'prop-types';
-const Frienditem = ({ id, isOnline, avatar, name }) => {
+const Frienditem = ({ isOnline, avatar, name }) => {
   return (
     <li className={css.item}>
       {isOnline ? (
@@ -15,7 +15,7 @@ const Frienditem = ({ id, isOnline, avatar, name }) => {
 };
 export default Frienditem;
 Frienditem.propTypes = {
-  isOnline: PropTypes.bool,
-  name: PropTypes.string,
-  avatar: PropTypes.string,
+  isOnline: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
