@@ -23,9 +23,10 @@ const StatsList = ({ title, stats }) => {
 };
 export default StatsList;
 StatsList.propTypes = {
-  title: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({ label: PropTypes.string, percentage: PropTypes.number })
+  ),
 };
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
